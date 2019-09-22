@@ -1,0 +1,217 @@
+// Sidebar
+.Sidebar {
+  &-inner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 15px;
+    text-align: right;
+    z-index: 1;
+  }
+
+  // Menu
+  &-toggle {
+    height: 40px;
+    width: 40px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  // Tracé
+  &-line {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 35%;
+    color: $yellow;
+    font-size: 18px;
+
+    &::after {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      bottom: 0;
+      content: ' ';
+      width: 2px;
+      background-color: $gray-700;
+      transform: translateX(-50%);
+    }
+  }
+
+  // Menu - navigation
+  &-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 320px;
+    border-left: 1px solid $white;
+    background-color: $darker;
+    z-index: 2;
+
+    // Menu - navigation Header
+    &Header {
+      position: relative;
+      padding: 20px 0 40px;
+    }
+
+    &Logo {
+      height: 60px;
+      width: 60px;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    // Menu - navigation Body
+    &Body {
+      padding: 0 20px 10px;
+      max-height: 90%;
+      text-align: right;
+    }
+
+    &Items {
+      padding: 0;
+    }
+
+    &Item {
+      margin-bottom: 20px;
+      padding-right: 16px;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    &ItemLink {
+      color: $white;
+      font-size: 20px;
+    }
+
+    // Menu - navigation Footer
+    &Footer {
+      position: absolute;
+      top: 90%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+    }
+
+    &Email {
+      color: $white;
+    }
+
+    &Social {
+      display: flex;
+      margin-top: 20px;
+      padding: 0;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    &SocialItem {
+      width: 25%;
+    }
+  }
+
+  // Réseaux sociaux
+  &-social {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &Item {
+      margin: 40px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &Link {
+      color: $white;
+    }
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // Sidebar
+  .Sidebar {
+    &-toggle {
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+
+    // Tracé
+    &-line {
+      color: $blue;
+
+      &::after {
+        background-color: $green-700;
+      }
+    }
+
+    // Menu - navigation
+    &-nav {
+      border-left: 1px solid $black;
+      background-color: $white;
+
+      .Cross {
+        &::before,
+        &::after {
+          background-color: $black;
+        }
+
+        &:hover,
+        &:focus {
+          &::before,
+          &::after {
+            background-color: $blue;
+          }
+        }
+      }
+
+      &Logo {
+        svg {
+          path {
+            stroke: $black;
+          }
+        }
+      }
+
+      // Menu - navigation Body
+      &ItemLink {
+        color: $black;
+      }
+
+      &Email {
+        color: $black;
+      }
+    }
+
+    // Réseaux sociaux
+    &-social {
+      &Link {
+        color: $black;
+      }
+    }
+  }
+}

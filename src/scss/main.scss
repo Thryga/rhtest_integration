@@ -5,3 +5,15 @@
 
 // Lib - Bootstrap
 @import 'lib/bootstrap';
+
+// Feuilles de style
+// global
+@import './global/styles';
+// logo
+@import './logo/styles';
+// sidebar
+@import './sidebar/styles';
+// about
+@import './about/styles';
+// contact
+@import './contact/styles';

@@ -1,0 +1,117 @@
+// Changement couleur réseaux sociaux
+.Sidebar-socialLink {
+  transition: color 200ms ease;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.Sidebar-socialItem.dark {
+  .Sidebar-socialLink {
+    color: $darker;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+// Changement couleur icône menu
+.Sidebar-toggle {
+  svg > path {
+    transition: stroke 200ms ease;
+  }
+
+  &:hover {
+    svg > path {
+      stroke: $yellow;
+    }
+  }
+}
+.Sidebar-toggle.dark {
+  svg > path {
+    stroke: $darker;
+  }
+
+  &:hover {
+    svg > path {
+      stroke: $yellow;
+    }
+  }
+}
+
+// Sidebar - menu
+.Sidebar-nav {
+  transition: transform 600ms ease;
+
+  // Feedback couleur
+  &ItemLink,
+  &Email {
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  // Ouverture - Fermeture
+  transform: translateX(100%);
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // Changement couleur réseaux sociaux
+  .Sidebar-socialLink {
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .Sidebar-socialItem.dark {
+    .Sidebar-socialLink {
+      color: $white;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  // Changement couleur icône menu
+  .Sidebar-toggle {
+    svg > path {
+      transition: stroke 200ms ease;
+    }
+
+    &:hover {
+      svg > path {
+        stroke: $blue;
+      }
+    }
+  }
+  .Sidebar-toggle.dark {
+    svg > path {
+      stroke: $white;
+    }
+
+    &:hover {
+      svg > path {
+        stroke: $blue;
+      }
+    }
+  }
+
+  // Sidebar - menu
+  .Sidebar-nav {
+    // Feedback couleur
+    &ItemLink,
+    &Email {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

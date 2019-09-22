@@ -1,0 +1,61 @@
+// Logo
+.Logo {
+  height: 100vh;
+  background-color: $dark;
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      height: auto;
+      width: 150px;
+    }
+  }
+
+  &-toggle {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: $white;
+    }
+  }
+}
+
+// DARK MODE
+@media (prefers-color-scheme: dark) {
+  .Logo {
+    background-color: $green;
+
+    &-icon {
+      svg {
+        path {
+          stroke: $black;
+
+          &:nth-child(n+6){
+            fill: $black;
+          }
+
+          &.a {
+            stroke: $blue;
+            fill: $blue;
+          }
+        }
+      }
+    }
+
+    &-toggle {
+      svg {
+        fill: $darker;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+// Contact
+.Contact {
+  &-title {
+    margin: 0;
+    font-size: 25px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+  }
+
+  &-subtitle {
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+  }
+
+  // Contact - formulaire
+  &-form {
+    margin-top: 40px;
+    padding-right: 30px;
+
+    &Button {
+      font-size: 16px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  // Contact - à propos
+  &-about {
+    margin-top: 60px;
+    font-weight: $font-weight-bold;
+  }
+
+  &-aboutTitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: $font-weight-black;
+    letter-spacing: 0.2em;
+  }
+
+  &-aboutCompany {
+    margin-bottom: 20px;
+  }
+
+  &-aboutEmail {
+    margin-top: 40px;
+    color: $yellow;
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // Contact
+  .Contact {
+    background-color: $black;
+
+    &-aboutEmail {
+      color: $blue;
+    }
+  }
+}

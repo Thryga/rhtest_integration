@@ -1,0 +1,27 @@
+@media (min-width: 480px) {
+  .Logo {
+    &-icon {
+      svg {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .Logo {
+    &-icon {
+      svg {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-height: 380px) {
+  .Logo {
+    &-toggle {
+      bottom: 15px;
+    }
+  }
+}

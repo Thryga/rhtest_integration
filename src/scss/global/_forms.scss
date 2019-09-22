@@ -1,0 +1,120 @@
+// Formulaire
+.Form {
+  // Conteneur
+  &-container {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  // Champs
+  &-field {
+    padding: 10px 10px 12px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-left: 2px solid $gray-600;
+    border-bottom: 2px solid $gray-600;
+    appearance: none;
+    outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  // Champs - textarea
+  &-textarea {
+    height: 12em;
+    width: 100%;
+    min-height: 3.5em;
+  }
+
+  // Label
+  &-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    margin: 0;
+    font-size: 14px;
+    color: $gray-600;
+  }
+
+  // Label - textarea
+  &-container--textarea .Form-label {
+    top: 30px;
+    bottom: auto;
+  }
+
+  // Notice
+  &-notice {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+    padding: 40px;
+    background-color: $dark;
+    border: 1px solid $darker;
+    color: $white;
+    transform: translateY(-50%) scale(0);
+    transition: transform 200ms ease;
+    z-index: 10;
+
+    &.active {
+      transform: translateY(-50%) scale(1);
+    }
+
+    &Cross {
+      top: 5px;
+      right: 5px;
+    }
+
+    &Items {
+      margin: 0;
+    }
+
+    &Item {
+      &::before {
+        margin-right: 5px;
+      }
+    }
+
+    &Button {
+      margin-top: 20px;
+    }
+
+    &Validate {
+      padding: 10px 40px;
+    }
+  }
+}
+
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // Formulaire
+  .Form {
+    // Champs
+    &-field {
+      color: $white;
+      border-left: 2px solid $green-600;
+      border-bottom: 2px solid $green-600;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    // Label
+    &-label {
+      color: $green-600;
+    }
+
+    // Notice
+    &-notice {
+      background-color: $green;
+      border: 1px solid $white;
+      color: $black;
+    }
+  }
+}

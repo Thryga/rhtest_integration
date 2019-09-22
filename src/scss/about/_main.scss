@@ -1,0 +1,107 @@
+// About
+.About {
+  background-color: $darker;
+
+  &-outter {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '{';
+      color: $yellow;
+    }
+
+    &::after {
+      position: absolute;
+      top: 30px;
+      left: 4px;
+      bottom: 0;
+      content: ' ';
+      width: 3px;
+      background-color: $gray-900;
+    }
+  }
+
+  &-company {
+    margin-bottom: 20px;
+    color: $yellow;
+    font-family: $font-family-sans-serif;
+    letter-spacing: 0.2em;
+  }
+
+  &-title {
+    margin-bottom: 60px;
+    font-size: 30px;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    line-height: 1em;
+    color: $white;
+  }
+
+  &-content--margin {
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+
+  &-content--padding {
+    padding: 0 5px 10px;
+  }
+
+  &-content,
+  &-items {
+    padding-right: 40px;
+    color: $white;
+  }
+
+  &-more {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  &-moreButton.btn.btn-outline-primary {
+    &::before {
+      background-color: $darker;
+    }
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // About
+  .About {
+    background-color: $white;
+
+    &-outter {
+      &::before {
+        color: $blue;
+      }
+
+      &::after {
+        background-color: $green-900;
+      }
+    }
+
+    &-company {
+      color: $blue;
+    }
+
+    &-title {
+      color: $black;
+    }
+
+    &-content,
+    &-items {
+      color: $black;
+    }
+
+    &-moreButton.btn.btn-outline-primary {
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+}

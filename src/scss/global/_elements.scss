@@ -1,0 +1,148 @@
+// Surcharge Boutons bootsrap
+.btn {
+  position: relative;
+  padding: 20px 60px;
+  border-radius: 0;
+  font-size: 12px;
+  font-family: $font-family-sans-serif;
+  letter-spacing: 0.2em;
+
+  transform: translateZ(0);
+  transition: color 300ms ease-out;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+    z-index: -1;
+    transform: scale(1);
+    transition: transform 300ms ease-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      transform: scale(0);
+    }
+  }
+}
+.btn.btn-outline-primary {
+  color: $white;
+  background-color: $white;
+  border: 2px solid $yellow;
+
+  &::before {
+    background-color: $darker;
+  }
+
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    color: $darker;
+    background-color: $white;
+    border: 2px solid $yellow;
+    box-shadow: none;
+  }
+}
+
+.btn.btn-outline-secondary {
+  padding: 10px 40px;
+  font-weight: $font-weight-black;
+  color: $darker;
+  background-color: $yellow;
+  border: 2px solid $yellow;
+
+  &::before {
+    background-color: $white;
+  }
+
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    color: $white;
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    box-shadow: none;
+  }
+}
+
+.Cross {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: block;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: ' ';
+    width: 1px;
+    background-color: $white;
+  }
+
+  &::before {
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+  }
+
+  &::after {
+    right: 50%;
+    transform: rotate(-45deg) translateX(50%);
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // Surcharge Boutons bootsrap
+  .btn.btn-outline-primary {
+    color: $black;
+    background-color: $black;
+    border: 2px solid $blue;
+
+    &::before {
+      background-color: $white;
+    }
+
+    &:hover,
+    &:focus,
+    &:not(:disabled):not(.disabled):active {
+      color: $white;
+      background-color: $black;
+      border: 2px solid $blue;
+    }
+  }
+
+  .btn.btn-outline-secondary {
+    color: $white;
+    background-color: $blue;
+    border: 2px solid $blue;
+
+    &::before {
+      background-color: $black;
+    }
+
+    &:hover,
+    &:focus,
+    &:not(:disabled):not(.disabled):active {
+      color: $black;
+      background-color: $blue;
+      border: 2px solid $blue;
+    }
+  }
+
+  .Cross {
+    &::before,
+    &::after {
+      background-color: $black;
+    }
+  }
+}

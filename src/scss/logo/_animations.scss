@@ -1,0 +1,51 @@
+// Changement couleur a de Fractory
+.Logo-icon {
+  svg {
+    path.a {
+      transition: fill 200ms ease, stroke 200ms ease;
+    }
+
+    &:hover {
+      path.a {
+        fill: $black;
+        stroke: $black;
+      }
+    }
+  }
+}
+
+// Animation ancre
+.Logo-toggle{
+  svg {
+    transition: fill 200ms ease, transform 200ms ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $yellow;
+      transform: scale(1.2);
+    }
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  .Logo-icon {
+    svg {
+      &:hover {
+        path.a {
+          fill: $white;
+          stroke: $white;
+        }
+      }
+    }
+  }
+
+  .Logo-toggle{
+    &:hover {
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+}

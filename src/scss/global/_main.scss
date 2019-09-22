@@ -1,0 +1,51 @@
+html, body {
+  font-family: $font-family-monospace;
+  font-size: 14px;
+  font-weight: $font-weight-light;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+}
+
+// Section
+.Section {
+  padding: 50px 0 30px;
+}
+
+// Liste
+.List {
+  &-items {
+    padding-left: 6px;
+    list-style: none;
+  }
+
+  &-item {
+    position: relative;
+
+    &::before {
+      display: inline-block;
+      content: ' ';
+      width: 6px;
+      height: 1px;
+      background-color: $yellow;
+      vertical-align: middle;
+    }
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  html, body {
+    color: $white;
+  }
+  // Liste
+  .List {
+    &-item {
+      &::before {
+        background-color: $blue;
+      }
+    }
+  }
+}

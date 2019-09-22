@@ -1,0 +1,82 @@
+// Survol lien
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($yellow, 15%);
+    text-decoration: none;
+  }
+}
+
+// Formulaire - Label
+.Form {
+  &-label {
+    transition: bottom 300ms ease;
+  }
+
+  &-label--textarea {
+    transition: top 300ms ease;
+  }
+
+  &-field:not(:placeholder-shown) {
+    padding: 20px 10px 2px;
+
+    + .Form-label:not(.Form-label--textarea) {
+      bottom: 22px;
+    }
+    + .Form-label--textarea {
+      top: 20px;
+    }
+  }
+
+  // Pb compatibilité IE 11
+  &-field:not(.placeholder-shown){
+    padding: 20px 10px 2px;
+
+    + .Form-label:not(.Form-label--textarea) {
+      bottom: 22px;
+    }
+    + .Form-label--textarea {
+      top: 20px;
+    }
+  }
+}
+
+// Croix de fermeture
+.Cross {
+  &::before,
+  &::after {
+    transition: background-color 200ms ease;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $yellow;
+    }
+  }
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  // Survol lien
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($blue, 15%);
+    }
+  }
+
+  // Croix de fermeture
+  .Cross {
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        background-color: $blue;
+      }
+    }
+  }
+}

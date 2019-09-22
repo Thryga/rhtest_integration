@@ -1,0 +1,35 @@
+@media (min-width: 480px) {
+  .About {
+    &-title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .About {
+    &-title {
+      font-size: 50px;
+      letter-spacing: 0.4em;
+    }
+    &-content,
+    &-items {
+      padding-right: 0;
+    }
+    &-content--padding {
+      padding: 0 20px 10px;
+    }
+    &-more {
+      padding-right: 20px;
+    }
+  }
+}
+
+@media (min-width: 1199px) {
+  .About {
+    &-title {
+      font-size: 70px;
+      letter-spacing: 0.5em;
+    }
+  }
+}

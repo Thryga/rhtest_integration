@@ -1,0 +1,43 @@
+@media (min-width: 480px) {
+  // Champ input formulaire
+  .Form-input {
+    width: 60%;
+  }
+}
+
+@media (min-width: 600px) {
+  .Form {
+    &-notice {
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+
+      &.active {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  // Section
+  .Section {
+    padding: 100px 0 60px;
+  }
+  // Champ input formulaire
+  .Form-input {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  // Champ input formulaire
+  .Form-input {
+    width: 60%;
+  }
+}
+@media (min-width: 1199px) {
+  // Champ input formulaire
+  .Form-input {
+    width: 40%;
+  }
+}
