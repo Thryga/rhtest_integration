@@ -1,8 +1,8 @@
-<svg viewBox="0 0 190 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M114.929 42.7916L91.7477 33.7603L84.7041 8.6145L108.599 17.9114L114.929 42.7916Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M84.7041 8.61458L126.52 1.00001L114.929 42.7916" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M91.7471 33.7604L108.598 17.9115L126.519 1.00001" stroke="white" stroke-width="0.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M74.9844 18.6196L98.2551 27.6509L105.299 52.8853L81.3147 43.5884L74.9844 18.6196Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M105.299 52.8856L63.4834 60.5002L74.985 18.62" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M98.2557 27.651L81.3154 43.5885L63.4834 60.4999" stroke="white" stroke-width="0.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M80.7,68.55,45,54.64,34.14,15.9,71,30.22Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M34.14,15.9,98.56,4.17,80.7,68.55" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M45,54.64,71,30.22l27.61-26" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+  <path d="M19.16,31.31,55,45.23,65.86,84.1,28.91,69.78Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M65.86,84.1,1.44,95.83,19.16,31.31" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M55,45.23,28.91,69.78,1.44,95.83" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
 </svg>
