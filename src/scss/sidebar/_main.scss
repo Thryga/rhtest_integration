@@ -53,6 +53,14 @@
     background-color: $darker;
     z-index: 2;
 
+    &Inner {
+      position: relative;
+      margin-right: -15px;
+      padding-right: 15px;
+      height: 100%;
+      overflow-y: scroll;
+    }
+
     // Menu - navigation Header
     &Header {
       position: relative;
